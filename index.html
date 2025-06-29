@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yellowblack • Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Yellowblack</h1>
+    <nav>
+      <a href="#inicio" class="tab active">Início</a>
+      <a href="#noticias" class="tab">Notícias</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="conteudo visible">
+      <h2>Bem-vindo ao universo Yellowblack</h2>
+    </section>
+
+    <section id="noticias" class="conteudo">
+      <h2>Últimas Notícias</h2>
+      <ul>
+        <li>"Yellowblack 1: Videos" vão ser lançado no Youtube"</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Yellowblack Studio • Licença MIT</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.conteudo');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('visible'));
+
+        tab.classList.add('active');
+        const target = document.querySelector(tab.getAttribute('href'));
+        target.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
