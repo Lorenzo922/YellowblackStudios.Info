@@ -1,63 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yellowblack • Início</title>
+  <title>Yellowblack</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Yellowblack</h1>
     <nav>
-      <a href="#inicio" class="tab active">Início</a>
-      <a href="#noticias" class="tab">Notícias</a>
-      <a href="#personagens" class="tab">Personagens</a>
+      <a href="#fanarts">🎨 Fanarts</a>
+      <a href="#sites">🌐 Meus Sites</a>
+      <a href="https://www.youtube.com/@yellowblack2016" target="_blank">▶️ YouTube</a>
     </nav>
   </header>
 
   <main>
-    <section id="inicio" class="conteudo visible">
-      <h2>Bem-vindo ao Site oficial do Yellowblack</h2>
-      <p>Esse Site mostra noticias/personagens oficial, criado por Yellowblack Studio</p>
+    <section id="fanarts">
+      <h2>Minhas Fanarts</h2>
+      <div class="fanarts-grid">
+        <img src="fanarts/imagem1.png" alt="Fanart 1">
+        <!-- Adicione mais imagens aqui -->
+      </div>
     </section>
 
-    <section id="noticias" class="conteudo">
-      <h2>Últimas Notícias</h2>
+    <section id="sites">
+      <h2>Meus Sites</h2>
       <ul>
-        <li>"Yellowblack 1: Vídeos" vai ser lançado no YouTube</li>
-      </ul>
-    </section>
-
-    <section id="personagens" class="conteudo">
-      <h2>Personagens</h2>
-      <ul>
-        <li><strong>Yellowblack</strong>: O personagem principal, com a marreta</li>
-        <li><strong>Yellowblack Father</strong>: Pai do Yellowblack, não tem descrição</li>
-        <li><strong>Neep</strong>: Amigo do Yellowblack, tem 17 anos</li>
+        <li><a href="" target="_blank">Site 1</a></li>
+        <li><a href="" target="_blank">Site 2</a></li>
+        <!-- Adicione mais sites aqui -->
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Yellowblack Studio • Licença MIT</p>
+    <p>© 2025 Yellowblack</p>
   </footer>
-
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const sections = document.querySelectorAll('.conteudo');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', e => {
-        e.preventDefault();
-        tabs.forEach(t => t.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('visible'));
-
-        tab.classList.add('active');
-        const target = document.querySelector(tab.getAttribute('href'));
-        target.classList.add('visible');
-      });
-    });
-  </script>
 </body>
 </html>
